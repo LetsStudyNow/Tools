@@ -15,11 +15,11 @@ module param_ram #(
 
 logic [WIDTH_DATA-1:0] mem [NUMWORDS];
 
-always_ff@(posedge clk)
+always_ff @(posedge clk)
 	if (wr_en)
 		mem[wr_addr] <= wr_data;
 
-always_ff@(posedge clk)
+always_ff @(posedge clk)
 	if (rd_en)
 		rd_data <= mem[rd_addr];
 
